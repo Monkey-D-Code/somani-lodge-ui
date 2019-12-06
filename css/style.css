@@ -6,7 +6,6 @@
 
 body {
   font-family: 'Sulphur Point', sans-serif;
-  padding: 1em;
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%23e5e170' fill-opacity='0.48'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
 
@@ -70,6 +69,24 @@ body {
     display: block; }
   100% {
     display: none; } }
+
+@keyframes roomImageSlide {
+  0% {
+    margin-top: 0; }
+  20% {
+    margin-top: 0; }
+  30% {
+    margin-top: -15em; }
+  40% {
+    margin-top: -15em; }
+  50% {
+    margin-top: -30em; }
+  65% {
+    margin-top: -30em; }
+  80% {
+    margin-top: -15em; }
+  100% {
+    margin-top: -15em; } }
 
 .header {
   height: 95vh;
@@ -145,7 +162,7 @@ body {
   width: 80vw;
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly; }
+  justify-content: flex-end; }
 
 .about {
   background: rgba(227, 178, 60, 0.5);
@@ -169,7 +186,9 @@ body {
   .about p {
     margin: 1em auto;
     color: #3c3436;
-    padding-top: 0.5em; }
+    padding-top: 0.5em;
+    height: 100%;
+    overflow: auto; }
 
 .intro-image {
   height: 100%;
@@ -189,17 +208,118 @@ body {
   .section {
     height: 50vh;
     flex-flow: column;
-    align-content: flex-end; }
+    align-content: center;
+    margin-top: 5em;
+    margin-bottom: -3em; }
   .about {
     width: 80vw;
     margin: 25em auto 0 auto; }
+    .about p {
+      height: 40vh;
+      overflow: auto; }
   .intro-image img {
-    width: 100%; } }
+    width: 100%;
+    display: none; } }
 
 @media only screen and (max-width: 360) {
   .about {
     width: 80vw;
     margin: 60vh auto 0 auto; } }
+
+.our-rooms-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 15vh, 100% 0%, 100% 85vh, 0% 100%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+  .our-rooms-section .content {
+    width: 85vw;
+    margin: 0 auto;
+    height: 65vh;
+    display: flex;
+    justify-content: space-around; }
+    .our-rooms-section .content .card {
+      width: 20em;
+      border-radius: 0.5em;
+      overflow: hidden;
+      background-color: #1B1F3B;
+      display: inline-block;
+      color: white;
+      -webkit-box-shadow: 10px 10px 11px -6px rgba(0, 0, 0, 0.43);
+      -moz-box-shadow: 10px 10px 11px -6px rgba(0, 0, 0, 0.43);
+      box-shadow: 10px 10px 11px -6px rgba(0, 0, 0, 0.43); }
+      .our-rooms-section .content .card .slider {
+        padding: 0;
+        width: 100%;
+        height: 12em;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column; }
+        .our-rooms-section .content .card .slider img {
+          width: 100%;
+          height: 15em;
+          object-fit: cover;
+          object-position: bottom; }
+        .our-rooms-section .content .card .slider img:first-child {
+          animation: roomImageSlide 10s ease-in-out infinite; }
+      .our-rooms-section .content .card h4 {
+        padding: 0.4em 0.5em;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        text-align: center; }
+      .our-rooms-section .content .card .rates {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23747350' fill-opacity='0.4' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+        padding: 0.5em; }
+        .our-rooms-section .content .card .rates .rate-card {
+          margin: 0.5em 0.6em;
+          border: 2px dotted white;
+          height: 4em;
+          display: flex;
+          justify-content: space-around;
+          align-items: center; }
+          .our-rooms-section .content .card .rates .rate-card h5 {
+            font-size: 1.2em; }
+          .our-rooms-section .content .card .rates .rate-card p {
+            padding: 0.5em;
+            border-radius: 0.3em;
+            background-image: linear-gradient(to right, #e05483, #c42459);
+            font-weight: 600; }
+
+@media only screen and (max-width: 1024px) {
+  .our-rooms-section {
+    height: 65vh;
+    clip-path: polygon(0 15vh, 100% 0%, 100% 46vh, 0% 100%); }
+    .our-rooms-section .content {
+      height: 30vh; } }
+
+@media only screen and (max-width: 768px) {
+  .our-rooms-section {
+    height: 95vh;
+    clip-path: polygon(0 15vh, 100% 0%, 100% 75vh, 0% 100%); }
+    .our-rooms-section .content {
+      height: 40vh; } }
+
+@media only screen and (max-width: 420px) {
+  .our-rooms-section {
+    height: 150vh;
+    clip-path: polygon(0 15vh, 100% 0%, 100% 135vh, 0% 100%);
+    overflow: auto; }
+    .our-rooms-section .content {
+      height: 120vh;
+      flex-flow: column;
+      align-items: center;
+      justify-content: space-evenly; } }
+
+@media only screen and (max-width: 375px) {
+  .our-rooms-section {
+    height: 170vh;
+    clip-path: polygon(0 15vh, 100% 0%, 100% 150vh, 0% 100%); }
+    .our-rooms-section .content {
+      height: 140vh; } }
 
 .call-to-action:link,
 .call-to-action:visited {
@@ -273,3 +393,12 @@ body {
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+
+::-webkit-scrollbar {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #8b8830, #3f3e16); }
+
+::-webkit-scrollbar-track {
+  border: 2px solid #d3d181; }

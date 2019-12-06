@@ -1,0 +1,9 @@
+::-webkit-scrollbar{
+    background : transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom ,lighten($actionTextColor,20%),$actionTextColor);
+}
+::-webkit-scrollbar-track{
+    border : 2px solid lighten($actionTextColor,50%);
+}

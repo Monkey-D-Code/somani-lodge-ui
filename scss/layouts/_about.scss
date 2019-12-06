@@ -5,7 +5,7 @@
     width: 80vw;
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .about {
@@ -29,6 +29,8 @@
        margin : 1em auto;
        color: lighten($color: $textDark, $amount: 5%);
        padding-top: 0.5em;
+       height : 100%;
+       overflow: auto;
     }
 }
 .intro-image{
@@ -55,16 +57,22 @@
       .section{
           height: 50vh;
           flex-flow: column;
-          align-content: flex-end;
+          align-content: center;
+          margin-top : 5em;
+          margin-bottom: -3em;
       }
       .about{
           width: 80vw;
           margin:  25em auto 0 auto;
+          p{
+              height: 40vh;
+              overflow: auto;
+          }
       }
       .intro-image{
           img{
               width: 100%;
-            
+                display: none;
           }
       }
   }
