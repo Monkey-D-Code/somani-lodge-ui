@@ -1,0 +1,82 @@
+.header {
+    height : 95vh;
+    width : 100%;
+    
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+
+    @include background;
+    
+}
+
+.logo-box{
+    position: absolute;
+    top : 2em;
+    left : 2em;
+    
+}
+
+.brand-name{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: white;
+    border : 2px 0 2px 0;
+    border-color: white;
+    letter-spacing: 0.2em;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.hero-text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.primary-heading{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    backface-visibility: hidden;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.tag-line{
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 0.6em;
+    text-align: center;
+    font-size: 1.2em;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@media only screen and (max-width: 1024px) and (min-width : 767){
+    .header{
+        clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+        height: 50vh;
+    }
+  }
+
+  @media only screen and (max-width: 768) and (min-width : 410){
+    .primary-heading{
+        font-size: 1.5em;
+    }
+    
+  }
+
+  @media only screen and (max-width : 411){
+    .header{
+        clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+        height: 70vh;
+    }
+
+    
+  }

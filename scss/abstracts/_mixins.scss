@@ -1,0 +1,38 @@
+// mixins
+@mixin background{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+@mixin linkButton($color){
+    text-decoration: none;
+    padding: 1em 2em;
+    display: inline-block;
+    font-weight: bold;
+    color: $color;
+    text-transform: uppercase;
+
+}
+
+@mixin fluidTransparentBg($bgColor,$color){
+    background: rgba(($bgColor),0.5); 
+    color: ($color);
+    width: 50%;
+}
+
+@mixin textGradientRight($color){
+    background-image: linear-gradient(to right , lighten($color,20%), $color);
+        width: fit-content;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block; 
+}
+
+@mixin fluidShadow($shadowColor){
+    -webkit-box-shadow: 3px 4px 5px 0px $shadowColor;
+    -moz-box-shadow: 3px 4px 5px 0px $shadowColor;
+    box-shadow: 3px 4px 5px 0px $shadowColor;
+}

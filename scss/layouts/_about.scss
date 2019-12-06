@@ -1,0 +1,77 @@
+.section{
+    
+    height : 80vh;
+    margin : 1em auto 1em auto;
+    width: 80vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.about {
+    @include fluidTransparentBg(#E3B23C, $bg_secondary_color);
+    display: flex;
+    flex-flow: column;
+    padding : 2em;
+    justify-content: center;
+
+    h1{
+        
+        @include textGradientRight($actionTextColor);
+        text-transform: uppercase;
+        font-size: 1.7em;
+        padding-left : 0.5em;
+        border-left : 3px solid lighten($textDark,10%);
+    }
+
+    p{
+       
+       margin : 1em auto;
+       color: lighten($color: $textDark, $amount: 5%);
+       padding-top: 0.5em;
+    }
+}
+.intro-image{
+    height: 100%;
+    position: relative;
+    img{
+        background-image: linear-gradient(to right ,lighten($color: $textDark, $amount: 5%),$textDark);
+        width : 40vw;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width : 767){
+    .header{
+        clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+        height: 50vh;
+    }
+  }
+
+  @media only screen and (max-width : 420px){
+      .section{
+          height: 50vh;
+          flex-flow: column;
+          align-content: flex-end;
+      }
+      .about{
+          width: 80vw;
+          margin:  25em auto 0 auto;
+      }
+      .intro-image{
+          img{
+              width: 100%;
+            
+          }
+      }
+  }
+
+  @media only screen and (max-width : 360){
+    .about{
+        width: 80vw;
+        margin:  60vh auto 0 auto;
+    }
+  }

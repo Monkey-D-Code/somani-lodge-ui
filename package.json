@@ -1,0 +1,14 @@
+{
+  "name": "somani-lodge",
+  "version": "1.0.0",
+  "description": "Front end code of somani-lodge",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "Bodhisatwa Barma",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
