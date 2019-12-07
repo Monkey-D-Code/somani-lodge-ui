@@ -126,3 +126,14 @@
     }
 
 }
+
+@media only screen and (max-width : 320px){
+    .our-rooms-section{
+        height: 190vh;
+        clip-path: polygon(0 15vh, 100% 0%, 100% 180vh, 0% 100%);
+        .content{
+            height: 140vh;
+        }
+    }
+
+}

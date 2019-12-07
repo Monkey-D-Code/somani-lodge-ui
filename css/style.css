@@ -321,6 +321,85 @@ body {
     .our-rooms-section .content {
       height: 140vh; } }
 
+@media only screen and (max-width: 320px) {
+  .our-rooms-section {
+    height: 190vh;
+    clip-path: polygon(0 15vh, 100% 0%, 100% 180vh, 0% 100%); }
+    .our-rooms-section .content {
+      height: 140vh; } }
+
+.why-choose-us-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  .why-choose-us-section .heading-section {
+    font-size: 2.5em;
+    background-image: linear-gradient(to right, #e05483, #1B1F3B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .why-choose-us-section .desc {
+    width: 40em;
+    text-align: center;
+    color: #3f3e16;
+    border: 2px solid #3f3e16;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    margin: 0.5em;
+    font-size: 0.9em; }
+  .why-choose-us-section .reasons {
+    width: 70%;
+    margin: 1em 0.5em; }
+    .why-choose-us-section .reasons .single-reason {
+      display: flex;
+      align-items: center;
+      margin: 0.9em 0;
+      justify-content: space-around; }
+      .why-choose-us-section .reasons .single-reason img {
+        height: 12em;
+        width: 12em;
+        border-radius: 50%;
+        object-fit: cover; }
+      .why-choose-us-section .reasons .single-reason .info {
+        width: 70%; }
+        .why-choose-us-section .reasons .single-reason .info h3 {
+          background-image: linear-gradient(to right, #e05483, #1B1F3B);
+          color: white;
+          display: inline-block;
+          padding: 0.5em 1em;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 1px;
+          border-radius: 0.2em; }
+        .why-choose-us-section .reasons .single-reason .info p {
+          color: #434d92;
+          padding: 0.5em 0;
+          font-size: 0.9em; }
+
+@media only screen and (max-width: 768px) {
+  .why-choose-us-section .reasons {
+    width: 90%; }
+    .why-choose-us-section .reasons .single-reason img {
+      height: 10em;
+      width: 10em; } }
+
+@media only screen and (max-width: 420px) {
+  .why-choose-us-section .desc {
+    width: 90%; }
+  .why-choose-us-section .reasons {
+    width: 90%s; }
+    .why-choose-us-section .reasons .single-reason {
+      align-items: stretch;
+      justify-content: space-between; }
+      .why-choose-us-section .reasons .single-reason img {
+        width: 8em;
+        height: 8em; }
+      .why-choose-us-section .reasons .single-reason .info {
+        margin-left: 0.5em; } }
+
 .call-to-action:link,
 .call-to-action:visited {
   border-radius: 0.2em;

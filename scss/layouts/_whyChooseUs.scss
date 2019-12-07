@@ -1,0 +1,98 @@
+.why-choose-us-section{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .heading-section{
+        
+        font-size: 2.5em;
+        background-image: linear-gradient(to right ,$bg_secondary_color,$bg_primary_color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        font-weight: bold;
+        
+        text-transform: uppercase;
+    }
+    .desc{
+        width: 40em;
+        text-align: center;
+        color: $actionTextColor;
+        border : 2px solid $actionTextColor;
+        padding : 0.5em;
+        border-radius: 0.4em;
+        margin : 0.5em;
+        font-size: 0.9em;
+    }
+    .reasons{
+        width : 70%; 
+        margin: 1em 0.5em;
+        .single-reason{
+            display: flex;
+            align-items: center;
+            margin : 0.9em 0;
+            justify-content: space-around;
+            img{
+                height: 12em;
+                width: 12em;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .info {
+                width : 70%;
+                h3{
+                    background-image: linear-gradient(to right ,$bg_secondary_color,$bg_primary_color);
+                    color: white;
+                    display: inline-block;
+                    padding: 0.5em 1em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    border-radius: 0.2em;
+                }
+                p{
+                    color: lighten($bg_primary_color , 25%);
+                    padding : 0.5em 0;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .why-choose-us-section{
+        .reasons{
+            width: 90%;
+            .single-reason{
+                img {
+                    height: 10em;
+                    width: 10em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 420px){
+    .why-choose-us-section{
+        .desc{
+            width : 90%;
+        }
+        .reasons{
+            width: 90%s;
+            .single-reason{
+                align-items: stretch;
+                justify-content: space-between;
+                img {
+                    width: 8em;
+                    height: 8em;
+                    
+                }
+                .info{
+                    margin-left: 0.5em;
+                }
+            }
+        }
+    }
+}
