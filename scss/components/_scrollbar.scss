@@ -7,3 +7,24 @@
 ::-webkit-scrollbar-track{
     border : 2px solid lighten($actionTextColor,50%);
 }
+
+
+::-moz-scrollbar{
+    background : transparent;
+}
+::-moz-scrollbar-thumb{
+    background-image: linear-gradient(to bottom ,lighten($actionTextColor,20%),$actionTextColor);
+}
+::-moz-scrollbar-track{
+    border : 2px solid lighten($actionTextColor,50%);
+}
+
+::scrollbar{
+    background : transparent;
+}
+::scrollbar-thumb{
+    background-image: linear-gradient(to bottom ,lighten($actionTextColor,20%),$actionTextColor);
+}
+::scrollbar-track{
+    border : 2px solid lighten($actionTextColor,50%);
+}

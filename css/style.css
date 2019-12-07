@@ -400,6 +400,75 @@ body {
       .why-choose-us-section .reasons .single-reason .info {
         margin-left: 0.5em; } }
 
+.facilities {
+  min-height: 100vh;
+  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  -moz-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+  .facilities .content {
+    height: 70%;
+    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
+    display: flex; }
+    .facilities .content .facility-card {
+      width: 300px;
+      display: flex;
+      flex-flow: column;
+      margin: 1em;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+      -webkit-box-shadow: 6px 11px 16px -4px rgba(0, 0, 0, 0.58);
+      -moz-box-shadow: 6px 11px 16px -4px rgba(0, 0, 0, 0.58);
+      box-shadow: 6px 11px 16px -4px rgba(0, 0, 0, 0.58);
+      background-color: rgba(27, 31, 59, 0.75); }
+      .facilities .content .facility-card:nth-child(even) {
+        background-color: rgba(224, 84, 131, 0.75);
+        color: black; }
+      .facilities .content .facility-card img {
+        height: 12em;
+        width: 300px;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%, 40% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%, 40% 100%, 0 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%, 40% 100%, 0 100%); }
+      .facilities .content .facility-card .info {
+        width: 70%;
+        position: relative; }
+        .facilities .content .facility-card .info h3 {
+          text-align: right;
+          position: absolute;
+          top: -35px;
+          right: -30px;
+          font-size: 1.6em;
+          text-transform: uppercase; }
+        .facilities .content .facility-card .info p {
+          margin: 1em 0;
+          font-size: 0.9em;
+          overflow: auto; }
+
+@media only screen and (max-width: 1024px) {
+  .facilities {
+    height: 50vh; } }
+
+@media only screen and (max-width: 768px) {
+  .facilities {
+    height: fit-content;
+    padding: 20em 0;
+    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+    -webkit-clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+    -moz-clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%); }
+    .facilities .content {
+      flex-flow: column;
+      align-items: center;
+      width: 95%; }
+      .facilities .content .facility-card {
+        padding-bottom: 1em; } }
+
 .call-to-action:link,
 .call-to-action:visited {
   border-radius: 0.2em;
@@ -480,4 +549,22 @@ body {
   background-image: linear-gradient(to bottom, #8b8830, #3f3e16); }
 
 ::-webkit-scrollbar-track {
+  border: 2px solid #d3d181; }
+
+::-moz-scrollbar {
+  background: transparent; }
+
+::-moz-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #8b8830, #3f3e16); }
+
+::-moz-scrollbar-track {
+  border: 2px solid #d3d181; }
+
+::scrollbar {
+  background: transparent; }
+
+::scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #8b8830, #3f3e16); }
+
+::scrollbar-track {
   border: 2px solid #d3d181; }

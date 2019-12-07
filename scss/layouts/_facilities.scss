@@ -1,0 +1,94 @@
+.facilities{
+    min-height: 100vh;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    -moz-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .content {
+        // background-color: red;
+        height: 70%;
+        overflow: auto;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        .facility-card{
+            
+            width : 300px;
+            display: flex;
+            flex-flow: column;
+            margin : 1em;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            -webkit-box-shadow: 6px 11px 16px -4px rgba(0,0,0,0.58);
+            -moz-box-shadow: 6px 11px 16px -4px rgba(0,0,0,0.58);
+            box-shadow: 6px 11px 16px -4px rgba(0,0,0,0.58);
+
+            background-color: rgba($bg_primary_color,0.75);
+            &:nth-child(even){
+                
+                background-color: rgba($bg_secondary_color,0.75);
+                color: darken($bg_primary_color,40%);
+                
+
+            }
+            img {
+                height: 12em;
+                width: 300px;
+                object-fit: cover;
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%,40% 100%,0 100%);
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%,40% 100%,0 100%);
+                -moz-clip-path: polygon(0 0, 100% 0, 100% 80%, 57% 80%,40% 100%,0 100%);
+            }
+            .info {
+                width : 70%;
+                position: relative;
+                h3{
+                    text-align: right;
+                    position: absolute;
+                    top: -35px;
+                    right: -30px;
+                    font-size: 1.6em;
+                    text-transform: uppercase;
+                }
+                p{
+                    margin: 1em 0;
+                    font-size: 0.9em;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1024px){
+    .facilities{
+        height: 50vh;
+        .content{
+            .facility-card{
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 768px){
+    .facilities{
+        height: fit-content;
+        padding : 20em 0;
+        clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+        -webkit-clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+        -moz-clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+        .content{
+            flex-flow: column;
+            align-items: center;
+            width: 95%;
+            .facility-card{
+                padding-bottom: 1em;
+            }
+        }
+    }
+}
