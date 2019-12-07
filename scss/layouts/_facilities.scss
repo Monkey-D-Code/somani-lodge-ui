@@ -1,5 +1,7 @@
 .facilities{
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
     -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
     -moz-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
@@ -65,7 +67,7 @@
 
 @media only screen and (max-width : 1024px){
     .facilities{
-        height: 50vh;
+        
         .content{
             .facility-card{
 
