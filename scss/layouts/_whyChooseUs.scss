@@ -33,8 +33,8 @@
             margin : 0.9em 0;
             justify-content: space-around;
             img{
-                height: 12em;
-                width: 12em;
+                height: 13em;
+                width: 13em;
                 border-radius: 50%;
                 object-fit: cover;
             }
@@ -64,10 +64,25 @@
     .why-choose-us-section{
         .reasons{
             width: 90%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
             .single-reason{
-                img {
-                    height: 10em;
-                    width: 10em;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                
+               
+                .info{
+                    h3{
+                        
+                        text-align: center;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    p{
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -82,13 +97,8 @@
         .reasons{
             width: 90%s;
             .single-reason{
-                align-items: stretch;
-                justify-content: space-between;
-                img {
-                    width: 8em;
-                    height: 8em;
-                    
-                }
+                
+                
                 .info{
                     margin-left: 0.5em;
                 }

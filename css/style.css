@@ -359,8 +359,8 @@ body {
       margin: 0.9em 0;
       justify-content: space-around; }
       .why-choose-us-section .reasons .single-reason img {
-        height: 12em;
-        width: 12em;
+        height: 13em;
+        width: 13em;
         border-radius: 50%;
         object-fit: cover; }
       .why-choose-us-section .reasons .single-reason .info {
@@ -381,24 +381,28 @@ body {
 
 @media only screen and (max-width: 768px) {
   .why-choose-us-section .reasons {
-    width: 90%; }
-    .why-choose-us-section .reasons .single-reason img {
-      height: 10em;
-      width: 10em; } }
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    .why-choose-us-section .reasons .single-reason {
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+      .why-choose-us-section .reasons .single-reason .info h3 {
+        text-align: center;
+        display: block;
+        margin: 0 auto; }
+      .why-choose-us-section .reasons .single-reason .info p {
+        text-align: center; } }
 
 @media only screen and (max-width: 420px) {
   .why-choose-us-section .desc {
     width: 90%; }
   .why-choose-us-section .reasons {
     width: 90%s; }
-    .why-choose-us-section .reasons .single-reason {
-      align-items: stretch;
-      justify-content: space-between; }
-      .why-choose-us-section .reasons .single-reason img {
-        width: 8em;
-        height: 8em; }
-      .why-choose-us-section .reasons .single-reason .info {
-        margin-left: 0.5em; } }
+    .why-choose-us-section .reasons .single-reason .info {
+      margin-left: 0.5em; } }
 
 .facilities {
   min-height: 100vh;
@@ -469,48 +473,48 @@ body {
       .facilities .content .facility-card {
         padding-bottom: 1em; } }
 
-.testimonials-section {
-  margin: 1em 0; }
-  .testimonials-section h1 {
-    font-size: 2.5em;
-    background-image: linear-gradient(to left, #1B1F3B, #e05483);
-    width: fit-content;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-transform: uppercase;
-    margin: 1em auto; }
-  .testimonials-section .testimonial-list {
-    width: 60%;
-    margin: 0 auto; }
-  .testimonials-section .testimonial {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2em; }
-    .testimonials-section .testimonial .visitor img {
-      height: 15em;
-      width: 15em;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #e05483; }
-    .testimonials-section .testimonial .visitor .visitor-info {
-      text-align: center;
-      color: #1B1F3B; }
-      .testimonials-section .testimonial .visitor .visitor-info h4 {
-        font-size: 1.9em; }
-    .testimonials-section .testimonial .message {
-      width: 60%; }
-      .testimonials-section .testimonial .message .msg {
-        border: 2px dotted #e05483;
-        padding: 1em;
-        color: #1B1F3B;
-        font-weight: 500; }
-      .testimonials-section .testimonial .message .date {
-        font-size: 1.1em;
-        margin: 0.3em;
-        font-weight: bold;
-        color: #e87fa2; }
+.testimonials-section h1 {
+  font-size: 2.5em;
+  background-image: linear-gradient(to left, #1B1F3B, #e05483);
+  width: fit-content;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  margin: 1em auto; }
+
+.testimonials-section .testimonial-list {
+  width: 60%;
+  margin: 0 auto; }
+
+.testimonials-section .testimonial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em; }
+  .testimonials-section .testimonial .visitor img {
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e05483; }
+  .testimonials-section .testimonial .visitor .visitor-info {
+    text-align: center;
+    color: #1B1F3B; }
+    .testimonials-section .testimonial .visitor .visitor-info h4 {
+      font-size: 1.9em; }
+  .testimonials-section .testimonial .message {
+    width: 60%; }
+    .testimonials-section .testimonial .message .msg {
+      border: 2px dotted #e05483;
+      padding: 1em;
+      color: #1B1F3B;
+      font-weight: 500; }
+    .testimonials-section .testimonial .message .date {
+      font-size: 1.1em;
+      margin: 0.3em;
+      font-weight: bold;
+      color: #e87fa2; }
 
 @media only screen and (max-width: 768px) {
   .testimonials-section h1 {
