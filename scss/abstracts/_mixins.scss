@@ -19,7 +19,7 @@
 @mixin fluidTransparentBg($bgColor,$color){
     background: rgba(($bgColor),0.5); 
     color: ($color);
-    width: 50%;
+    
 }
 
 @mixin textGradientRight($color){
@@ -35,4 +35,12 @@
     -webkit-box-shadow: 3px 4px 5px 0px $shadowColor;
     -moz-box-shadow: 3px 4px 5px 0px $shadowColor;
     box-shadow: 3px 4px 5px 0px $shadowColor;
+}
+
+@mixin gradientTextColor($color1,$color2){
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color : transparent;
+    background-image: linear-gradient(to right,$color1,$color2);
 }

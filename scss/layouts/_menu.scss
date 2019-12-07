@@ -1,0 +1,102 @@
+.menu-section{
+    width : 100%;
+    padding : 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    h1{
+        @include gradientTextColor($bg_secondary_color,$bg_primary_color);
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+    }
+    .menu-list{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin : 0 auto;
+        .menu{
+            margin : 1em 0;
+            width : 300px;
+            position: relative;
+            -webkit-box-shadow: 10px 10px 13px -8px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 13px -8px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 13px -8px rgba(0,0,0,0.75);
+            img{
+                width : 300px;
+                height: 200px;
+                object-fit: cover;
+            }
+            .details{
+                h3{
+                    text-align: center;
+                    font-size: 1.6em;
+                    text-transform: uppercase;
+                    background-color: rgba($actionTextColor , 0.8);
+                    color: white;
+                    margin-top: -6px;
+                }
+                p{
+                    padding : 0.3em 0.1em;
+                    width : 80%;
+                    font-size: 0.9em;
+                    line-height: 1.2em;
+                    color: lighten($actionTextColor,15%);
+                }
+                .items{
+                    @include fluidTransparentBg($bg_secondary_color , white);
+                    
+                    height: 20em;
+                    overflow: auto;
+                    padding : 0.5em 0;
+                    .item{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin : 0.5em;
+                        img{
+                            width : 110px !important;
+                            height: 110px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            margin-right: 0.7em;
+                        }
+                        div{
+                            width : 90%;
+                            h4{
+                                color: darken($bg_secondary_color,20%);
+                            }
+                            p{  
+                                color: $bg_primary_color;
+                                font-size: 0.7em;
+                                line-height: 15px;
+                            }
+                            .price{
+                                letter-spacing: 2px;
+                                padding : 0.3em 0.5em;
+                                width: fit-content;
+                                font-weight: bold;
+                                color: white;
+                                font-size: 1.1em;
+                                border-radius: 3px;
+                                background-image: linear-gradient(to right , $bg_secondary_color,$bg_primary_color);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .menu-section{
+        .menu-list{
+            flex-flow: column;
+        }
+    }
+}
